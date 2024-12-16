@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HBD NUHA</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/8611/8611787.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="animation-box.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+    <div class="container-main">
+        <center>
+            <div>
+                <h1 style="display: inline;margin-right: 30px;">HBD BU GURU</h1>
+                <img src="img/emot nangis.png" alt="emote nangis :'''" style="width: 12%;" />
+            </div>
+        </center>
+        <div class="box-content">
+            <p>HBD BU GURU SEMOGA PANJANG UMUR DAN SEHAT SELALU</p>
+            <br>
+            <p>SEMOGA IBU GURU JADI IBU GURU YANG BAIK DAN GAK GALAK</p>
+            <br>
+            <p>SAMA JANGAN KASIH PR YANG SUSAH SUSAH YA BU GURU</p>
+            <br>
+            <p>HUUUUUUUU AKU NANGIS BU GURU!!!!!</p>
+            <br>
+            <p>WADKWADJFAIWGAIGIAKFAWFIAWJKFK</p>
+            <br>
+            <button id="show-button">PENCET INI BU GURU</button>
+        </div>
+        <div class="box-content" id="video-box">
+            <video width="400" height="300" controls>
+                <source src="video/project uwu.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="box-content" id="tepuk-semangat">
+            <button id="a1">TEPUK SEMANGAT!!!</button>
+            <p id="tepukSemangat">TEPUK SEMANGAT !!!!</p>
+            <button id="a2">SE</button>
+            <p id="SE">SE *PROK *PROK *PROK</p>
+            <button id="a3">MA</button>
+            <p id="MA">MA *PROK *PROK *PROK</p>
+            <button id="a4">NGAT</button>
+            <p id="NGAT">NGAT *PROK *PROK *PROK</p>
+            <button id="a5">SEMANGAT</button>
+            <P id="SEMANGAT">SEEE....MANGATTTT!!! YEEEEEE!!!</P>
+            <a href="https://wa.me/62895378704804"  target="_blank" id="last">
+                <button>HORMAT KEPADA BU GURU NUHA o7</button>
+            </a>
+        </div>
+    </div>
+
+    <audio id="confettiSound" src="audio/confetti.mp3" preload="auto"></audio>
+    <script>
+        var videoBox = document.getElementById("video-box");
+        var buttonShow = document.getElementById("show-button");
+
+        var tepukSemangat = document.getElementById("tepuk-semangat");
+        var satu = document.getElementById("a1");
+        var dua = document.getElementById("a2");
+        var tiga = document.getElementById("a3");
+        var empat = document.getElementById("a4");
+        var lima = document.getElementById("a5");
+
+        var tepukSemangat = document.getElementById("tepukSemangat");
+        var se = document.getElementById("SE");
+        var ma = document.getElementById("MA");
+        var ngat = document.getElementById("NGAT");
+        var semangat = document.getElementById("SEMANGAT");
+
+        var last = document.getElementById("last");
+
+        buttonShow.addEventListener("click",function(){
+            videoBox.style.display = "flex";
+            videoBox.classList.add("show");
+            buttonShow.style.display="none";
+            satu.style.display = "block";
+            videoBox.play();
+        })
+        satu.addEventListener("click",function(){
+            satu.style.display = "none";
+            dua.style.display = "block";
+            tepukSemangat.style.display = "block";
+        })
+        dua.addEventListener("click",function(){
+            dua.style.display = "none";
+            tiga.style.display = "block";
+            se.style.display = "block";
+        })
+        tiga.addEventListener("click",function(){
+            tiga.style.display = "none";
+            empat.style.display = "block";
+            ma.style.display = "block";
+        })
+        empat.addEventListener("click",function(){
+            empat.style.display = "none";
+            lima.style.display = "block";
+            ngat.style.display = "block";
+        })
+        lima.addEventListener("click",function(){
+            lima.style.display = "none";
+            semangat.style.display = "block";
+            last.style.display = "block";
+        })
+        // Efek confetti saat halaman pertama kali dibuka
+        window.onload = function () {
+            confetti({
+                particleCount: 100, // Jumlah partikel confetti
+                spread: 70, // Penyebaran confetti
+                origin: { y: 0.6 } // Posisi asal confetti
+            });
+
+            var sound = document.getElementById("confettiSound");
+            sound.play(); // Memainkan suara
+
+            videoBox.style.display = "none";
+        };
+    </script>
+</body>
+
+</html>
